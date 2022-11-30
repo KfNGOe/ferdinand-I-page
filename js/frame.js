@@ -24,7 +24,7 @@
         var embedId = "#" + $( click_para ).parents("div.text").attr("id") + " " + click_para.attr("href") ;                    
         var embedDiv = $( embedId ).parent("div.frame-texts");
         var embedTitle = $( embedId ).attr("title") ;                        
-	var gitRepo = "https://rh1967.github.io" ;         
+	var gitRepo = "https://kfngoe.github.io/ferdinand-I-page" ;         
         var embed = gitRepo + "/data/pdf/start/" + embedTitle + ".pdf" ;
         var embedTag = embedId + " embed" ;        
         
