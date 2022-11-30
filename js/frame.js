@@ -24,7 +24,7 @@
         var embedId = "#" + $( click_para ).parents("div.text").attr("id") + " " + click_para.attr("href") ;                    
         var embedDiv = $( embedId ).parent("div.frame-texts");
         var embedTitle = $( embedId ).attr("title") ;                
-        var gitRepo = $(location).attr("origin");        
+        var gitRepo = $(location).attr("host");        
         var embed = gitRepo + "/data/pdf/start/" + embedTitle + ".pdf" ;
         var embedTag = embedId + " embed" ;        
         
