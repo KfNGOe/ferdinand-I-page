@@ -23,8 +23,19 @@
     function embedLoad( click_para ) {        
         var embedId = "#" + $( click_para ).parents("div.text").attr("id") + " " + click_para.attr("href") ;                    
         var embedDiv = $( embedId ).parent("div.frame-texts");
-        var embedTitle = $( embedId ).attr("title") ;                        
-	var gitRepo = "https://kfngoe.github.io/ferdinand-I-page" ;         
+        var embedTitle = $( embedId ).attr("title") ;                
+
+        var hostName = $(location).attr("hostname") ;
+        var pathName = $(location).attr("pathname") ;
+        var tmpUrl = hostName + pathName ;
+        var tmpUrlArr = tmpUrl.split('/') ;
+
+        if (tmpUrlArr.length == 1 || (tmpUrlArr.length == 2 && tmpUrlArr[1] == "index.html")) {
+            var gitRepo = "https://" + tmpUrlArr[0] ;
+        } else {
+            var gitRepo = "https://" + tmpUrlArr[0] + "/" + tmpUrlArr[1] ;
+        }
+
         var embed = gitRepo + "/data/pdf/start/" + embedTitle + ".pdf" ;
         var embedTag = embedId + " embed" ;        
         
